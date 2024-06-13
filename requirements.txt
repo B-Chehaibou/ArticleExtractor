@@ -6,3 +6,4 @@ langchain
 numpy
 wheel
 setuptools
+langchain_openai
