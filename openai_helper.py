@@ -1,8 +1,9 @@
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import SystemMessage, HumanMessage
-from langchain.output_parsers import StrOutputParser
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.output_parsers import StrOutputParser
 import json
 import pandas as pd
+
 
 
 

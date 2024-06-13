@@ -27,7 +27,8 @@ st.markdown(
 # Streamlit layout
 st.title("Information Extractor")
 
-openai_api_key = st.text_input("Enter your OpenAI API Key:", type="password")
+#openai_api_key = st.text_input("Enter your OpenAI API Key:", type="password")
+openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
 if openai_api_key:
     openai.api_key = openai_api_key
