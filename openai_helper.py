@@ -1,20 +1,10 @@
-from langchain_openai import ChatOpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
-from langchain_core.output_parsers import StrOutputParser
-import os
-from dotenv import load_dotenv
+from langchain.output_parsers import StrOutputParser
 import json
 import pandas as pd
 
-# Load environment variables
-load_dotenv()
 
-
-# Initialize model and parser
-model = ChatOpenAI()
-parser = StrOutputParser()
-
-chain = model | parser
 
 system_message = """
 I will provide you with a text excerpt from a scientific paper in the field of colloidal nanocrystals.
@@ -42,7 +32,12 @@ Output the extracted information in the following JSON format:
 }
 """
 
-def extract(text):
+def extract(text,openai_key):
+    # Initialize model and parser
+    model = ChatOpenAI(openai_api_key = openai_key)
+    parser = StrOutputParser()
+
+    chain = model | parser
     messages = [
         SystemMessage(
             content=system_message
