@@ -41,7 +41,7 @@ if openai_api_key:
         if uploaded_file is not None:
             if st.button("Extract"):
                 pdf_text = extract_text_from_pdf(uploaded_file)
-                df = openai_helper.extract(pdf_text)
+                df = openai_helper.extract(pdf_text,openai_api_key)
                 st.session_state['df'] = df  # Store DataFrame in session state
             else:
                 df = st.session_state.get('df', None)
