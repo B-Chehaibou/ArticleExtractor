@@ -3,6 +3,6 @@ pandas
 PyPDF2
 openai
 langchain
-numpy==1.21.0
+numpy
 wheel
 setuptools
