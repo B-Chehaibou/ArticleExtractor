@@ -7,3 +7,4 @@ numpy
 wheel
 setuptools
 langchain_openai
+openai_helper
