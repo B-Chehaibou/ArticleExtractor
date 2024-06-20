@@ -23,4 +23,3 @@ streamlit run main.py
 
 You need to create an account on openai website.
 Once you get an api key from your account add it the prompt.
-
